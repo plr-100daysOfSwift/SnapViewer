@@ -24,7 +24,13 @@ class ViewController: UITableViewController {
 	}
 
 	@objc func addSnap() {
-		print("adding snap")
+		let picker = UIImagePickerController()
+		picker.delegate = self
+		if UIImagePickerController.isSourceTypeAvailable(.camera) {
+			picker.sourceType = .camera
+		}
+		picker.allowsEditing = true
+		present(picker, animated: true)
 	}
 
 	// Table View Data Source
