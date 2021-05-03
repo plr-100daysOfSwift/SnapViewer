@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UITableViewController {
+class ViewController: UITableViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
 
 	var snaps = [Snap]()
 
@@ -33,6 +33,18 @@ class ViewController: UITableViewController {
 		present(picker, animated: true)
 	}
 
+	// ImagePicker Delegate
+
+	func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+		// more to come
+
+		dismiss(animated: true, completion: addName)
+	}
+
+	func addName() {
+
+	}
+	
 	// Table View Data Source
 
 	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
