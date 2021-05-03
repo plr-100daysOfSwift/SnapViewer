@@ -18,9 +18,9 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate & U
 
 		navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addSnap))
 
-		let snap = Snap(name: "foo", image: "bar")
-		snaps.append(snap)
-		tableView.reloadData()
+//		let snap = Snap(name: "foo", image: "bar")
+//		snaps.append(snap)
+//		tableView.reloadData()
 	}
 
 	@objc func addSnap() {
@@ -41,7 +41,16 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate & U
 	// ImagePicker Delegate
 
 	func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-		// more to come
+		guard let image = info[.editedImage] as? UIImage else { return }
+		let name = UUID().uuidString
+		let imagePath = getDocumentsDirectory().appendingPathComponent(name)
+		if let imageData = image.jpegData(compressionQuality: 0.8) {
+			try? imageData.write(to: imagePath)
+		}
+
+		let snap = Snap(name: "Unknown", image: name)
+		snaps.append(snap)
+		tableView.reloadData()
 
 		dismiss(animated: true, completion: addName)
 	}
@@ -49,7 +58,7 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate & U
 	func addName() {
 
 	}
-	
+
 	// Table View Data Source
 
 	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
