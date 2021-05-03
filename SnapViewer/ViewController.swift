@@ -11,9 +11,13 @@ class ViewController: UITableViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view.
+
+		navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addSnap))
 	}
 
+	@objc func addSnap() {
+		print("adding snap")
+	}
 
 }
 
