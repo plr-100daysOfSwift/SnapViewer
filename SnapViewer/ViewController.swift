@@ -9,15 +9,34 @@ import UIKit
 
 class ViewController: UITableViewController {
 
+	var snaps = [Snap]()
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
 		navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addSnap))
+
+		let snap = Snap(name: "foo", image: "bar")
+		snaps.append(snap)
+		tableView.reloadData()
 	}
 
 	@objc func addSnap() {
 		print("adding snap")
 	}
 
+	// Table View Data Source
+
+	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		return snaps.count
+	}
+
+	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		let snap = snaps[indexPath.row]
+		let cell = tableView.dequeueReusableCell(withIdentifier: "Snap", for: indexPath)
+		cell.textLabel?.text = snap.name
+		cell.detailTextLabel?.text = snap.image
+		return cell
+	}
 }
 
