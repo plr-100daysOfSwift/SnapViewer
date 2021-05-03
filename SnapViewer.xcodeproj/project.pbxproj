@@ -15,6 +15,7 @@
 		DAF88D0B2640AA7700E51980 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAF88D092640AA7700E51980 /* LaunchScreen.storyboard */; };
 		DAF88D162640AA7700E51980 /* SnapViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF88D152640AA7700E51980 /* SnapViewerTests.swift */; };
 		DAF88D212640AA7700E51980 /* SnapViewerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF88D202640AA7700E51980 /* SnapViewerUITests.swift */; };
+		DAF88D2F2640ADCC00E51980 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF88D2E2640ADCC00E51980 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		DAF88D1C2640AA7700E51980 /* SnapViewerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnapViewerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAF88D202640AA7700E51980 /* SnapViewerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapViewerUITests.swift; sourceTree = "<group>"; };
 		DAF88D222640AA7700E51980 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAF88D2E2640ADCC00E51980 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				DAF88CFE2640AA7600E51980 /* AppDelegate.swift */,
 				DAF88D002640AA7600E51980 /* SceneDelegate.swift */,
 				DAF88D022640AA7600E51980 /* ViewController.swift */,
+				DAF88D2E2640ADCC00E51980 /* DetailViewController.swift */,
 				DAF88D042640AA7600E51980 /* Main.storyboard */,
 				DAF88D072640AA7700E51980 /* Assets.xcassets */,
 				DAF88D092640AA7700E51980 /* LaunchScreen.storyboard */,
@@ -261,6 +264,7 @@
 				DAF88D032640AA7600E51980 /* ViewController.swift in Sources */,
 				DAF88CFF2640AA7600E51980 /* AppDelegate.swift in Sources */,
 				DAF88D012640AA7600E51980 /* SceneDelegate.swift in Sources */,
+				DAF88D2F2640ADCC00E51980 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
