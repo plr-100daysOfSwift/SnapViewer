@@ -14,6 +14,8 @@ class ViewController: UITableViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
+		title = "SnapViewer"
+
 		navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addSnap))
 
 		let snap = Snap(name: "foo", image: "bar")
