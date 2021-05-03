@@ -1,0 +1,598 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DAF88CFF2640AA7600E51980 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF88CFE2640AA7600E51980 /* AppDelegate.swift */; };
+		DAF88D012640AA7600E51980 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF88D002640AA7600E51980 /* SceneDelegate.swift */; };
+		DAF88D032640AA7600E51980 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF88D022640AA7600E51980 /* ViewController.swift */; };
+		DAF88D062640AA7600E51980 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAF88D042640AA7600E51980 /* Main.storyboard */; };
+		DAF88D082640AA7700E51980 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAF88D072640AA7700E51980 /* Assets.xcassets */; };
+		DAF88D0B2640AA7700E51980 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAF88D092640AA7700E51980 /* LaunchScreen.storyboard */; };
+		DAF88D162640AA7700E51980 /* SnapViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF88D152640AA7700E51980 /* SnapViewerTests.swift */; };
+		DAF88D212640AA7700E51980 /* SnapViewerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF88D202640AA7700E51980 /* SnapViewerUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DAF88D122640AA7700E51980 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DAF88CF32640AA7600E51980 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DAF88CFA2640AA7600E51980;
+			remoteInfo = SnapViewer;
+		};
+		DAF88D1D2640AA7700E51980 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DAF88CF32640AA7600E51980 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DAF88CFA2640AA7600E51980;
+			remoteInfo = SnapViewer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DAF88CFB2640AA7600E51980 /* SnapViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAF88CFE2640AA7600E51980 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DAF88D002640AA7600E51980 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		DAF88D022640AA7600E51980 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DAF88D052640AA7600E51980 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DAF88D072640AA7700E51980 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DAF88D0A2640AA7700E51980 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DAF88D0C2640AA7700E51980 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAF88D112640AA7700E51980 /* SnapViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnapViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAF88D152640AA7700E51980 /* SnapViewerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapViewerTests.swift; sourceTree = "<group>"; };
+		DAF88D172640AA7700E51980 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAF88D1C2640AA7700E51980 /* SnapViewerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnapViewerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAF88D202640AA7700E51980 /* SnapViewerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapViewerUITests.swift; sourceTree = "<group>"; };
+		DAF88D222640AA7700E51980 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DAF88CF82640AA7600E51980 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAF88D0E2640AA7700E51980 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAF88D192640AA7700E51980 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DAF88CF22640AA7600E51980 = {
+			isa = PBXGroup;
+			children = (
+				DAF88CFD2640AA7600E51980 /* SnapViewer */,
+				DAF88D142640AA7700E51980 /* SnapViewerTests */,
+				DAF88D1F2640AA7700E51980 /* SnapViewerUITests */,
+				DAF88CFC2640AA7600E51980 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DAF88CFC2640AA7600E51980 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DAF88CFB2640AA7600E51980 /* SnapViewer.app */,
+				DAF88D112640AA7700E51980 /* SnapViewerTests.xctest */,
+				DAF88D1C2640AA7700E51980 /* SnapViewerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DAF88CFD2640AA7600E51980 /* SnapViewer */ = {
+			isa = PBXGroup;
+			children = (
+				DAF88CFE2640AA7600E51980 /* AppDelegate.swift */,
+				DAF88D002640AA7600E51980 /* SceneDelegate.swift */,
+				DAF88D022640AA7600E51980 /* ViewController.swift */,
+				DAF88D042640AA7600E51980 /* Main.storyboard */,
+				DAF88D072640AA7700E51980 /* Assets.xcassets */,
+				DAF88D092640AA7700E51980 /* LaunchScreen.storyboard */,
+				DAF88D0C2640AA7700E51980 /* Info.plist */,
+			);
+			path = SnapViewer;
+			sourceTree = "<group>";
+		};
+		DAF88D142640AA7700E51980 /* SnapViewerTests */ = {
+			isa = PBXGroup;
+			children = (
+				DAF88D152640AA7700E51980 /* SnapViewerTests.swift */,
+				DAF88D172640AA7700E51980 /* Info.plist */,
+			);
+			path = SnapViewerTests;
+			sourceTree = "<group>";
+		};
+		DAF88D1F2640AA7700E51980 /* SnapViewerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DAF88D202640AA7700E51980 /* SnapViewerUITests.swift */,
+				DAF88D222640AA7700E51980 /* Info.plist */,
+			);
+			path = SnapViewerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DAF88CFA2640AA7600E51980 /* SnapViewer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAF88D252640AA7700E51980 /* Build configuration list for PBXNativeTarget "SnapViewer" */;
+			buildPhases = (
+				DAF88CF72640AA7600E51980 /* Sources */,
+				DAF88CF82640AA7600E51980 /* Frameworks */,
+				DAF88CF92640AA7600E51980 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SnapViewer;
+			productName = SnapViewer;
+			productReference = DAF88CFB2640AA7600E51980 /* SnapViewer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DAF88D102640AA7700E51980 /* SnapViewerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAF88D282640AA7700E51980 /* Build configuration list for PBXNativeTarget "SnapViewerTests" */;
+			buildPhases = (
+				DAF88D0D2640AA7700E51980 /* Sources */,
+				DAF88D0E2640AA7700E51980 /* Frameworks */,
+				DAF88D0F2640AA7700E51980 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DAF88D132640AA7700E51980 /* PBXTargetDependency */,
+			);
+			name = SnapViewerTests;
+			productName = SnapViewerTests;
+			productReference = DAF88D112640AA7700E51980 /* SnapViewerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DAF88D1B2640AA7700E51980 /* SnapViewerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAF88D2B2640AA7700E51980 /* Build configuration list for PBXNativeTarget "SnapViewerUITests" */;
+			buildPhases = (
+				DAF88D182640AA7700E51980 /* Sources */,
+				DAF88D192640AA7700E51980 /* Frameworks */,
+				DAF88D1A2640AA7700E51980 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DAF88D1E2640AA7700E51980 /* PBXTargetDependency */,
+			);
+			name = SnapViewerUITests;
+			productName = SnapViewerUITests;
+			productReference = DAF88D1C2640AA7700E51980 /* SnapViewerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DAF88CF32640AA7600E51980 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					DAF88CFA2640AA7600E51980 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					DAF88D102640AA7700E51980 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = DAF88CFA2640AA7600E51980;
+					};
+					DAF88D1B2640AA7700E51980 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = DAF88CFA2640AA7600E51980;
+					};
+				};
+			};
+			buildConfigurationList = DAF88CF62640AA7600E51980 /* Build configuration list for PBXProject "SnapViewer" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DAF88CF22640AA7600E51980;
+			productRefGroup = DAF88CFC2640AA7600E51980 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DAF88CFA2640AA7600E51980 /* SnapViewer */,
+				DAF88D102640AA7700E51980 /* SnapViewerTests */,
+				DAF88D1B2640AA7700E51980 /* SnapViewerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DAF88CF92640AA7600E51980 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAF88D0B2640AA7700E51980 /* LaunchScreen.storyboard in Resources */,
+				DAF88D082640AA7700E51980 /* Assets.xcassets in Resources */,
+				DAF88D062640AA7600E51980 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAF88D0F2640AA7700E51980 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAF88D1A2640AA7700E51980 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DAF88CF72640AA7600E51980 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAF88D032640AA7600E51980 /* ViewController.swift in Sources */,
+				DAF88CFF2640AA7600E51980 /* AppDelegate.swift in Sources */,
+				DAF88D012640AA7600E51980 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAF88D0D2640AA7700E51980 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAF88D162640AA7700E51980 /* SnapViewerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAF88D182640AA7700E51980 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAF88D212640AA7700E51980 /* SnapViewerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DAF88D132640AA7700E51980 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DAF88CFA2640AA7600E51980 /* SnapViewer */;
+			targetProxy = DAF88D122640AA7700E51980 /* PBXContainerItemProxy */;
+		};
+		DAF88D1E2640AA7700E51980 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DAF88CFA2640AA7600E51980 /* SnapViewer */;
+			targetProxy = DAF88D1D2640AA7700E51980 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DAF88D042640AA7600E51980 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DAF88D052640AA7600E51980 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DAF88D092640AA7700E51980 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DAF88D0A2640AA7700E51980 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DAF88D232640AA7700E51980 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DAF88D242640AA7700E51980 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DAF88D262640AA7700E51980 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UC6H82UP9B;
+				INFOPLIST_FILE = SnapViewer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.plrichardson.SnapViewer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DAF88D272640AA7700E51980 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UC6H82UP9B;
+				INFOPLIST_FILE = SnapViewer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.plrichardson.SnapViewer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DAF88D292640AA7700E51980 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UC6H82UP9B;
+				INFOPLIST_FILE = SnapViewerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.plrichardson.SnapViewerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SnapViewer.app/SnapViewer";
+			};
+			name = Debug;
+		};
+		DAF88D2A2640AA7700E51980 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UC6H82UP9B;
+				INFOPLIST_FILE = SnapViewerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.plrichardson.SnapViewerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SnapViewer.app/SnapViewer";
+			};
+			name = Release;
+		};
+		DAF88D2C2640AA7700E51980 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UC6H82UP9B;
+				INFOPLIST_FILE = SnapViewerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.plrichardson.SnapViewerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SnapViewer;
+			};
+			name = Debug;
+		};
+		DAF88D2D2640AA7700E51980 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UC6H82UP9B;
+				INFOPLIST_FILE = SnapViewerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.plrichardson.SnapViewerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SnapViewer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DAF88CF62640AA7600E51980 /* Build configuration list for PBXProject "SnapViewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAF88D232640AA7700E51980 /* Debug */,
+				DAF88D242640AA7700E51980 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DAF88D252640AA7700E51980 /* Build configuration list for PBXNativeTarget "SnapViewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAF88D262640AA7700E51980 /* Debug */,
+				DAF88D272640AA7700E51980 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DAF88D282640AA7700E51980 /* Build configuration list for PBXNativeTarget "SnapViewerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAF88D292640AA7700E51980 /* Debug */,
+				DAF88D2A2640AA7700E51980 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DAF88D2B2640AA7700E51980 /* Build configuration list for PBXNativeTarget "SnapViewerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAF88D2C2640AA7700E51980 /* Debug */,
+				DAF88D2D2640AA7700E51980 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DAF88CF32640AA7600E51980 /* Project object */;
+}
