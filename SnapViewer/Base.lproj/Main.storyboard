@@ -74,7 +74,7 @@
         <!--Detail View Controller-->
         <scene sceneID="vga-bC-N1c">
             <objects>
-                <viewController storyboardIdentifier="DetailView" id="fiG-Gg-ZfJ" customClass="DetailViewController" customModule="SnapViewer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" id="fiG-Gg-ZfJ" customClass="DetailViewController" customModule="SnapViewer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bA2-FW-7Uz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

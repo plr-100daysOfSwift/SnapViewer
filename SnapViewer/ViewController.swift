@@ -38,5 +38,15 @@ class ViewController: UITableViewController {
 		cell.detailTextLabel?.text = snap.image
 		return cell
 	}
+
+	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		let storyboard = UIStoryboard(name: "Main", bundle: nil)
+		let snap = snaps[indexPath.row]
+		if let vc = storyboard.instantiateViewController(identifier: "DetailViewController") as? DetailViewController {
+			vc.name = snap.name
+			vc.image = snap.image
+			navigationController?.pushViewController(vc, animated: true)
+		}
+	}
 }
 
