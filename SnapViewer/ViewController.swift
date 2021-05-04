@@ -38,13 +38,13 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate & U
 
 	func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
 		guard let image = info[.editedImage] as? UIImage else { return }
-		let name = UUID().uuidString
-		let imagePath = getDocumentsDirectory().appendingPathComponent(name)
+		let imageName = UUID().uuidString
+		let imagePath = getDocumentsDirectory().appendingPathComponent(imageName)
 		if let imageData = image.jpegData(compressionQuality: 0.8) {
 			try? imageData.write(to: imagePath)
 		}
 
-		let snap = Snap(name: "Unknown", image: name)
+		let snap = Snap(name: "Unknown", image: imageName)
 		snaps.append(snap)
 		tableView.reloadData()
 
