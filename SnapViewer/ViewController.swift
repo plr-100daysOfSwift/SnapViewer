@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UITableViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
 
+	let defaults = UserDefaults.standard
 	var snaps = [Snap]()
 
 	override func viewDidLoad() {
@@ -34,7 +35,6 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate & U
 		present(picker, animated: true)
 	}
 
-
 	// ImagePicker Delegate
 
 	func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -54,6 +54,13 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate & U
 
 	func addName() {
 
+	}
+
+	func save() {
+		let encoder = JSONEncoder()
+		if let encodedData = try? encoder.encode(snaps) {
+			defaults.set(encodedData, forKey: "Snaps")
+		}
 	}
 
 	// Table View Data Source

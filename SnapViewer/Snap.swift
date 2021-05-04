@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Snap {
+struct Snap: Codable {
 	var name: String
 	var image: String
 }

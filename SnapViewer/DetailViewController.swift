@@ -35,6 +35,4 @@ class DetailViewController: UIViewController {
 		navigationController?.hidesBarsOnTap = false
 	}
 
-
-
 }
