@@ -15,6 +15,7 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate & U
 		super.viewDidLoad()
 
 		title = "SnapViewer"
+		navigationController?.navigationBar.prefersLargeTitles = true
 
 		navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addSnap))
 

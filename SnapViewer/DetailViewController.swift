@@ -16,6 +16,7 @@ class DetailViewController: UIViewController {
 		super.viewDidLoad()
 
 		title = name
+		navigationItem.largeTitleDisplayMode = .never
 
 		if let image = selectedImage {
 			let imagePath = getDocumentsDirectory().appendingPathComponent(image)
