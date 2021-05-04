@@ -60,7 +60,7 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate & U
 	}
 
 	func addName() {
-		let ac = UIAlertController(title: "Please enter a title for your snap.", message: nil, preferredStyle: .alert)
+		let ac = UIAlertController(title: "Please enter a title.", message: nil, preferredStyle: .alert)
 		ac.addTextField() { textfield in
 			textfield.text = self.snaps[0].name
 			textfield.clearButtonMode = .always
