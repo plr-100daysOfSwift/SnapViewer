@@ -10,4 +10,5 @@ import Foundation
 struct Snap: Codable {
 	var name: String
 	var image: String
+	var dateAdded: Date = Date()
 }

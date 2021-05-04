@@ -101,7 +101,7 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate & U
 		let snap = snaps[indexPath.row]
 		let cell = tableView.dequeueReusableCell(withIdentifier: "Snap", for: indexPath)
 		cell.textLabel?.text = snap.name
-		cell.detailTextLabel?.text = snap.image
+		cell.detailTextLabel?.text = snap.dateAdded.description
 		return cell
 	}
 
