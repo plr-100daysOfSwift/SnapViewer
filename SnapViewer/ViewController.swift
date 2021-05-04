@@ -33,10 +33,6 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate & U
 		present(picker, animated: true)
 	}
 
-	func getDocumentsDirectory() -> URL {
-		let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-		return paths[0]
-	}
 
 	// ImagePicker Delegate
 

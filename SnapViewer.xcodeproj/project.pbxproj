@@ -17,6 +17,7 @@
 		DAF88D212640AA7700E51980 /* SnapViewerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF88D202640AA7700E51980 /* SnapViewerUITests.swift */; };
 		DAF88D2F2640ADCC00E51980 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF88D2E2640ADCC00E51980 /* DetailViewController.swift */; };
 		DAF88D312640B15A00E51980 /* Snap.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF88D302640B15A00E51980 /* Snap.swift */; };
+		DAF88D332640D5CF00E51980 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF88D322640D5CF00E51980 /* Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		DAF88D222640AA7700E51980 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DAF88D2E2640ADCC00E51980 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		DAF88D302640B15A00E51980 /* Snap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snap.swift; sourceTree = "<group>"; };
+		DAF88D322640D5CF00E51980 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				DAF88D092640AA7700E51980 /* LaunchScreen.storyboard */,
 				DAF88D0C2640AA7700E51980 /* Info.plist */,
 				DAF88D302640B15A00E51980 /* Snap.swift */,
+				DAF88D322640D5CF00E51980 /* Utilities.swift */,
 			);
 			path = SnapViewer;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAF88D332640D5CF00E51980 /* Utilities.swift in Sources */,
 				DAF88D032640AA7600E51980 /* ViewController.swift in Sources */,
 				DAF88D312640B15A00E51980 /* Snap.swift in Sources */,
 				DAF88CFF2640AA7600E51980 /* AppDelegate.swift in Sources */,
