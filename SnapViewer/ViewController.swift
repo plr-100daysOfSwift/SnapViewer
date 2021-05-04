@@ -95,7 +95,7 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate & U
 
 	// Table View Data Source
 
-	// TODO: allow deletion and reordering of table rows
+	// TODO: allow deletion and reordering of table rows; add an 'Edit' navbar button
 
 	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return snaps.count
@@ -120,5 +120,14 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate & U
 		}
 	}
 
-}
+	override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+		if editingStyle == .delete {
+			let imagePath = getDocumentsDirectory().appendingPathComponent(snaps[indexPath.row].image)
+			try? FileManager.default.removeItem(atPath: imagePath.path)
+			snaps.remove(at: indexPath.row)
+			tableView.deleteRows(at: [indexPath], with: .automatic)
+			save()
+		}
+	}
 
+}
