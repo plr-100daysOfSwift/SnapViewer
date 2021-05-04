@@ -20,9 +20,14 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate & U
 
 		navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addSnap))
 
-//		let snap = Snap(name: "foo", image: "bar")
-//		snaps.append(snap)
-//		tableView.reloadData()
+		if let encodedData = defaults.object(forKey: "Snaps") as? Data {
+			let decoder = JSONDecoder()
+			if let snaps = try? decoder.decode([Snap].self, from: encodedData) {
+				self.snaps = snaps
+				tableView.reloadData()
+			}
+		}
+
 	}
 
 	@objc func addSnap() {
