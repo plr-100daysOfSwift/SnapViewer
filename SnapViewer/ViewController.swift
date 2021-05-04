@@ -50,7 +50,7 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate & U
 			try? imageData.write(to: imagePath)
 		}
 
-		let snap = Snap(name: "Unknown", image: imageName)
+		let snap = Snap(name: "", image: imageName)
 		snaps.insert(snap, at: 0)
 		let firstIndex = IndexPath(item: 0, section: 0)
 		tableView.insertRows(at: [firstIndex], with: .automatic)
@@ -60,7 +60,23 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate & U
 	}
 
 	func addName() {
-
+		let ac = UIAlertController(title: "Please enter a title for your snap.", message: nil, preferredStyle: .alert)
+		ac.addTextField() { textfield in
+			textfield.text = self.snaps[0].name
+			textfield.clearButtonMode = .always
+			textfield.autocapitalizationType = .words
+		}
+		let okay = UIAlertAction(title: "OK", style: .default) { action in
+			if let title = ac.textFields?[0].text {
+				self.snaps[0].name = title.trimmingCharacters(in: .whitespacesAndNewlines)
+				let firstIndex = IndexPath(item: 0, section: 0)
+				self.tableView.reloadRows(at: [firstIndex], with: .automatic)
+				self.save()
+			}
+		}
+		ac.addAction(okay)
+		ac.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+		present(ac, animated: true)
 	}
 
 	func save() {
