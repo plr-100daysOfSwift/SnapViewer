@@ -78,9 +78,23 @@
                     <view key="view" contentMode="scaleToFill" id="bA2-FW-7Uz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="me9-Y6-Qsh">
+                                <rect key="frame" x="0.0" y="5" width="414" height="896"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ORB-1i-HFo"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="me9-Y6-Qsh" firstAttribute="width" secondItem="bA2-FW-7Uz" secondAttribute="width" id="4KB-gG-SLl"/>
+                            <constraint firstItem="me9-Y6-Qsh" firstAttribute="centerX" secondItem="ORB-1i-HFo" secondAttribute="centerX" id="4vJ-ef-9d4"/>
+                            <constraint firstItem="me9-Y6-Qsh" firstAttribute="height" secondItem="bA2-FW-7Uz" secondAttribute="height" id="Jha-HX-eZg"/>
+                            <constraint firstItem="me9-Y6-Qsh" firstAttribute="centerY" secondItem="ORB-1i-HFo" secondAttribute="centerY" id="co0-9L-54K"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="me9-Y6-Qsh" id="sda-4z-FbR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vwk-jE-jzy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
