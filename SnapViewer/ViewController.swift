@@ -74,7 +74,7 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate & U
 		let snap = snaps[indexPath.row]
 		if let vc = storyboard.instantiateViewController(identifier: "DetailViewController") as? DetailViewController {
 			vc.name = snap.name
-			vc.image = snap.image
+			vc.selectedImage = snap.image
 			navigationController?.pushViewController(vc, animated: true)
 		}
 	}
