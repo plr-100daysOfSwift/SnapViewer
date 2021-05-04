@@ -46,8 +46,10 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate & U
 		}
 
 		let snap = Snap(name: "Unknown", image: imageName)
-		snaps.append(snap)
-		tableView.reloadData()
+		snaps.insert(snap, at: 0)
+		let firstIndex = IndexPath(item: 0, section: 0)
+		tableView.insertRows(at: [firstIndex], with: .automatic)
+		save()
 
 		dismiss(animated: true, completion: addName)
 	}
