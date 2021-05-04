@@ -17,7 +17,13 @@ class DetailViewController: UIViewController {
 
 		title = name
 
-		print("Image: \(image)")
+		if let image = selectedImage {
+			let imagePath = getDocumentsDirectory().appendingPathComponent(image)
+			imageView.image = UIImage(contentsOfFile: imagePath.path)
+		}
+
 	}
+
+
 
 }
