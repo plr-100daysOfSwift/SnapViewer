@@ -1,11 +1,9 @@
 
 # SnapViewer
 
-Milestone 4
+[Milestone 4](https://www.hackingwithswift.com/guide/ios-classic/5/3/challenge)
 
 ## Challenge
-
-[Link](https://www.hackingwithswift.com/guide/ios-classic/5/3/challenge)
 
 The challenge is to put two different projects into one: let users take photos of things that interest them, add captions to them, then show those photos in a table view. Tapping the caption should show the picture in a new view controller, as in project 1. The finished project needs to use elements from both project 1 and project 12.
 
