@@ -59,6 +59,8 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate & U
 		dismiss(animated: true, completion: addName)
 	}
 
+	// TODO: allow renaming of snaps
+
 	func addName() {
 		let ac = UIAlertController(title: "Please enter a title.", message: nil, preferredStyle: .alert)
 		ac.addTextField() { textfield in
@@ -93,6 +95,8 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate & U
 
 	// Table View Data Source
 
+	// TODO: allow deletion and reordering of table rows
+
 	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return snaps.count
 	}
@@ -101,6 +105,7 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate & U
 		let snap = snaps[indexPath.row]
 		let cell = tableView.dequeueReusableCell(withIdentifier: "Snap", for: indexPath)
 		cell.textLabel?.text = snap.name
+		// TODO: add a date formatter
 		cell.detailTextLabel?.text = snap.dateAdded.description
 		return cell
 	}
@@ -114,5 +119,6 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate & U
 			navigationController?.pushViewController(vc, animated: true)
 		}
 	}
+
 }
 
