@@ -104,9 +104,15 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate & U
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let snap = snaps[indexPath.row]
 		let cell = tableView.dequeueReusableCell(withIdentifier: "Snap", for: indexPath)
+		
 		cell.textLabel?.text = snap.name
-		// TODO: add a date formatter
-		cell.detailTextLabel?.text = snap.dateAdded.description
+
+		let formatter = DateFormatter()
+		formatter.dateStyle = .medium
+		formatter.timeStyle = .short
+		let dateString = formatter.string(from: snap.dateAdded)
+		cell.detailTextLabel?.text = "Date added: \(dateString)"
+
 		return cell
 	}
 
