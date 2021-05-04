@@ -40,7 +40,7 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate & U
 		present(picker, animated: true)
 	}
 
-	// ImagePicker Delegate
+	// MARK: - ImagePicker Delegate
 
 	func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
 		guard let image = info[.editedImage] as? UIImage else { return }
@@ -93,7 +93,7 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate & U
 		}
 	}
 
-	// Table View Data Source
+	// MARK: - Table View Data Source
 
 	// TODO: allow deletion and reordering of table rows; add an 'Edit' navbar button
 
@@ -104,7 +104,7 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate & U
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let snap = snaps[indexPath.row]
 		let cell = tableView.dequeueReusableCell(withIdentifier: "Snap", for: indexPath)
-		
+
 		cell.textLabel?.text = snap.name
 
 		let formatter = DateFormatter()
