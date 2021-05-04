@@ -20,6 +20,8 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate & U
 
 		navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addSnap))
 
+		navigationItem.leftBarButtonItem = self.editButtonItem
+
 		if let encodedData = defaults.object(forKey: "Snaps") as? Data {
 			let decoder = JSONDecoder()
 			if let snaps = try? decoder.decode([Snap].self, from: encodedData) {
@@ -136,4 +138,7 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate & U
 		}
 	}
 
+	override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+		//
+	}
 }
