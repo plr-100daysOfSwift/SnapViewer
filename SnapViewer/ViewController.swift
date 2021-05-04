@@ -68,15 +68,20 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate & U
 		}
 		let okay = UIAlertAction(title: "OK", style: .default) { action in
 			if let title = ac.textFields?[0].text {
-				self.snaps[0].name = title.trimmingCharacters(in: .whitespacesAndNewlines)
-				let firstIndex = IndexPath(item: 0, section: 0)
-				self.tableView.reloadRows(at: [firstIndex], with: .automatic)
-				self.save()
+				saveTitle(title)
 			}
 		}
 		ac.addAction(okay)
-		ac.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+		ac.addAction(UIAlertAction(title: "Cancel", style: .cancel) { _ in saveTitle("Unknown")})
 		present(ac, animated: true)
+
+		func saveTitle(_ title: String) {
+			self.snaps[0].name = title.trimmingCharacters(in: .whitespacesAndNewlines)
+			let firstIndex = IndexPath(item: 0, section: 0)
+			self.tableView.reloadRows(at: [firstIndex], with: .automatic)
+			self.save()
+		}
+
 	}
 
 	func save() {
