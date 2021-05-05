@@ -97,8 +97,6 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate & U
 
 	// MARK: - Table View Data Source
 
-	// TODO: allow deletion and reordering of table rows; add an 'Edit' navbar button
-
 	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return snaps.count
 	}
@@ -139,6 +137,8 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate & U
 	}
 
 	override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-		//
+		let rowToMove = snaps.remove(at: sourceIndexPath.row)
+		snaps.insert(rowToMove, at: destinationIndexPath.row)
+		tableView.reloadData()
 	}
 }
