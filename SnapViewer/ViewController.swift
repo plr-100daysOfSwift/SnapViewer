@@ -61,6 +61,8 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate & U
 		dismiss(animated: true, completion: addName)
 	}
 
+	// TODO: - Refactor: consolidate addName() and rename()
+	
 	func addName() {
 		let ac = UIAlertController(title: "Please enter a title.", message: nil, preferredStyle: .alert)
 		ac.addTextField() { textfield in
