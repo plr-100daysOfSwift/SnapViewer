@@ -61,8 +61,6 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate & U
 		dismiss(animated: true, completion: addName)
 	}
 
-	// TODO: allow renaming of snaps
-
 	func addName() {
 		let ac = UIAlertController(title: "Please enter a title.", message: nil, preferredStyle: .alert)
 		ac.addTextField() { textfield in
@@ -83,6 +81,31 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate & U
 			self.snaps[0].name = title.trimmingCharacters(in: .whitespacesAndNewlines)
 			let firstIndex = IndexPath(item: 0, section: 0)
 			self.tableView.reloadRows(at: [firstIndex], with: .automatic)
+			self.save()
+		}
+
+	}
+
+	func rename(row: Int) {
+		let oldTitle = self.snaps[row].name
+		let ac = UIAlertController(title: "Please enter a new title.", message: nil, preferredStyle: .alert)
+		ac.addTextField() { textfield in
+			textfield.text = oldTitle
+			textfield.clearButtonMode = .always
+			textfield.autocapitalizationType = .words
+		}
+		let okay = UIAlertAction(title: "OK", style: .default) { action in
+			if let title = ac.textFields?[0].text {
+				saveTitle(title)
+			}
+		}
+		ac.addAction(okay)
+		ac.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+		present(ac, animated: true)
+
+		func saveTitle(_ title: String) {
+			self.snaps[row].name = title.trimmingCharacters(in: .whitespacesAndNewlines)
+			self.tableView.reloadRows(at: [IndexPath(item: row, section: 0)], with: .automatic)
 			self.save()
 		}
 
@@ -117,12 +140,16 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate & U
 	}
 
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		let storyboard = UIStoryboard(name: "Main", bundle: nil)
-		let snap = snaps[indexPath.row]
-		if let vc = storyboard.instantiateViewController(identifier: "DetailViewController") as? DetailViewController {
-			vc.name = snap.name
-			vc.selectedImage = snap.image
-			navigationController?.pushViewController(vc, animated: true)
+		if tableView.isEditing {
+			rename(row: indexPath.row)
+		} else {
+			let storyboard = UIStoryboard(name: "Main", bundle: nil)
+			let snap = snaps[indexPath.row]
+			if let vc = storyboard.instantiateViewController(identifier: "DetailViewController") as? DetailViewController {
+				vc.name = snap.name
+				vc.selectedImage = snap.image
+				navigationController?.pushViewController(vc, animated: true)
+			}
 		}
 	}
 
