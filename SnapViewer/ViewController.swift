@@ -9,8 +9,12 @@ import UIKit
 
 class ViewController: UITableViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
 
+	// MARK:- Properties
+
 	let defaults = UserDefaults.standard
 	var snaps = [Snap]()
+
+	// MARK: - Life Cycle
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -32,16 +36,6 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate & U
 
 	}
 
-	@objc func addSnap() {
-		let picker = UIImagePickerController()
-		picker.delegate = self
-		if UIImagePickerController.isSourceTypeAvailable(.camera) {
-			picker.sourceType = .camera
-		}
-		picker.allowsEditing = true
-		present(picker, animated: true)
-	}
-
 	// MARK: - ImagePicker Delegate
 
 	func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -59,68 +53,6 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate & U
 		save()
 
 		dismiss(animated: true, completion: addName)
-	}
-
-	// TODO: - Refactor: consolidate addName() and rename()
-
-	func addName() {
-		let ac = UIAlertController(title: "Please enter a title.", message: nil, preferredStyle: .alert)
-		ac.addTextField() { textfield in
-			textfield.text = self.snaps[0].name
-			textfield.clearButtonMode = .always
-			textfield.autocapitalizationType = .words
-		}
-		let okay = UIAlertAction(title: "OK", style: .default) { action in
-			if let title = ac.textFields?[0].text {
-				saveTitle(title)
-			}
-		}
-		ac.addAction(okay)
-		ac.addAction(UIAlertAction(title: "Cancel", style: .cancel) { _ in saveTitle("Unknown")})
-		present(ac, animated: true)
-
-		func saveTitle(_ title: String) {
-			self.snaps[0].name = title.trimmingCharacters(in: .whitespacesAndNewlines)
-			let firstIndex = IndexPath(item: 0, section: 0)
-			self.tableView.reloadRows(at: [firstIndex], with: .automatic)
-			self.save()
-		}
-
-	}
-
-	func rename(row: Int) {
-		let oldTitle = self.snaps[row].name
-		let ac = UIAlertController(title: "Please enter a new title.", message: nil, preferredStyle: .alert)
-		ac.addTextField() { textfield in
-			textfield.text = oldTitle
-			textfield.clearButtonMode = .always
-			textfield.autocapitalizationType = .words
-		}
-		let okay = UIAlertAction(title: "OK", style: .default) { action in
-			if let title = ac.textFields?[0].text {
-				saveTitle(title)
-			}
-		}
-		ac.addAction(okay)
-		ac.addAction(UIAlertAction(title: "Cancel", style: .cancel))
-		present(ac, animated: true)
-
-		func saveTitle(_ title: String) {
-			self.snaps[row].name = title.trimmingCharacters(in: .whitespacesAndNewlines)
-			self.tableView.reloadRows(at: [IndexPath(item: row, section: 0)], with: .automatic)
-			self.save()
-		}
-
-		func setName(row: Int = 0, isRenaming: Bool = false) {
-
-		}
-	}
-
-	func save() {
-		let encoder = JSONEncoder()
-		if let encodedData = try? encoder.encode(snaps) {
-			defaults.set(encodedData, forKey: "Snaps")
-		}
 	}
 
 	// MARK: - Table View Data Source
@@ -146,7 +78,7 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate & U
 
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		if tableView.isEditing {
-			rename(row: indexPath.row)
+			rename(indexPath: indexPath)
 		} else {
 			let storyboard = UIStoryboard(name: "Main", bundle: nil)
 			let snap = snaps[indexPath.row]
@@ -173,4 +105,73 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate & U
 		snaps.insert(rowToMove, at: destinationIndexPath.row)
 		save()
 	}
+
+	// MARK: - Private Methods
+
+
+	@objc private func addSnap() {
+		let picker = UIImagePickerController()
+		picker.delegate = self
+		if UIImagePickerController.isSourceTypeAvailable(.camera) {
+			picker.sourceType = .camera
+		}
+		picker.allowsEditing = true
+		present(picker, animated: true)
+	}
+
+
+	private func addName() {
+		setName()
+	}
+
+	private func rename(indexPath: IndexPath) {
+		setName(indexPath: indexPath, isRenaming: true)
+	}
+
+	private func setName(indexPath: IndexPath = IndexPath(row: 0, section: 0), isRenaming: Bool = false) {
+		let row = indexPath.row
+		let title: String
+		let cancel: UIAlertAction
+		let oldTitle = self.snaps[row].name
+
+		switch isRenaming {
+		case true:
+			title = "Please enter a new title."
+			cancel = UIAlertAction(title: "Cancel", style: .cancel)
+		default:
+			title = "Please enter a title."
+			cancel = UIAlertAction(title: "Cancel", style: .cancel) { _ in saveTitle("Unknown")}
+		}
+
+		let ac = UIAlertController(title: title, message: nil, preferredStyle: .alert)
+		ac.addTextField() { textfield in
+			textfield.text = oldTitle
+			textfield.clearButtonMode = .always
+			textfield.autocapitalizationType = .words
+		}
+
+		let okay = UIAlertAction(title: "OK", style: .default) { action in
+			if let title = ac.textFields?[0].text {
+				saveTitle(title)
+			}
+		}
+		ac.addAction(okay)
+		ac.addAction(cancel)
+		present(ac, animated: true)
+
+		func saveTitle(_ title: String) {
+			self.snaps[row].name = title.trimmingCharacters(in: .whitespacesAndNewlines)
+			self.tableView.reloadRows(at: [indexPath], with: .automatic)
+			self.save()
+		}
+
+	}
+
+	private func save() {
+		let encoder = JSONEncoder()
+		if let encodedData = try? encoder.encode(snaps) {
+			defaults.set(encodedData, forKey: "Snaps")
+		}
+	}
+
 }
