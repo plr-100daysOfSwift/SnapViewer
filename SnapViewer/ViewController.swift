@@ -62,7 +62,7 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate & U
 	}
 
 	// TODO: - Refactor: consolidate addName() and rename()
-	
+
 	func addName() {
 		let ac = UIAlertController(title: "Please enter a title.", message: nil, preferredStyle: .alert)
 		ac.addTextField() { textfield in
@@ -111,6 +111,9 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate & U
 			self.save()
 		}
 
+		func setName(row: Int = 0, isRenaming: Bool = false) {
+
+		}
 	}
 
 	func save() {
@@ -168,6 +171,6 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate & U
 	override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
 		let rowToMove = snaps.remove(at: sourceIndexPath.row)
 		snaps.insert(rowToMove, at: destinationIndexPath.row)
-		tableView.reloadData()
+		save()
 	}
 }
